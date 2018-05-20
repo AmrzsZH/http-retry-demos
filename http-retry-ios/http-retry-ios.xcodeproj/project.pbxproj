@@ -12,9 +12,12 @@
 		686336D120A459D400E479B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 686336CF20A459D400E479B4 /* Main.storyboard */; };
 		686336D320A459D400E479B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 686336D220A459D400E479B4 /* Assets.xcassets */; };
 		686336D620A459D400E479B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 686336D420A459D400E479B4 /* LaunchScreen.storyboard */; };
+		8DA807DBD7C495A065D81A44 /* Pods_http_retry_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48BA47481F9CABB28BF76420 /* Pods_http_retry_ios.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		438061C64BCF88B45EA363CA /* Pods-http-retry-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-http-retry-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-http-retry-ios/Pods-http-retry-ios.release.xcconfig"; sourceTree = "<group>"; };
+		48BA47481F9CABB28BF76420 /* Pods_http_retry_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_http_retry_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		686336C820A459D400E479B4 /* http-retry-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "http-retry-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		686336CB20A459D400E479B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		686336CD20A459D400E479B4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,7 @@
 		686336D220A459D400E479B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		686336D520A459D400E479B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		686336D720A459D400E479B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD16A750725B9B6A99B61999 /* Pods-http-retry-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-http-retry-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-http-retry-ios/Pods-http-retry-ios.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DA807DBD7C495A065D81A44 /* Pods_http_retry_ios.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		214D9B32E7A6CB991C94ACB9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				48BA47481F9CABB28BF76420 /* Pods_http_retry_ios.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5E963284B49FC1221C9CDDBF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BD16A750725B9B6A99B61999 /* Pods-http-retry-ios.debug.xcconfig */,
+				438061C64BCF88B45EA363CA /* Pods-http-retry-ios.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		686336BF20A459D400E479B4 = {
 			isa = PBXGroup;
 			children = (
 				686336CA20A459D400E479B4 /* http-retry-ios */,
 				686336C920A459D400E479B4 /* Products */,
+				5E963284B49FC1221C9CDDBF /* Pods */,
+				214D9B32E7A6CB991C94ACB9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 686336DA20A459D400E479B4 /* Build configuration list for PBXNativeTarget "http-retry-ios" */;
 			buildPhases = (
+				D7F1C163426682C6DA417DA6 /* [CP] Check Pods Manifest.lock */,
 				686336C420A459D400E479B4 /* Sources */,
 				686336C520A459D400E479B4 /* Frameworks */,
 				686336C620A459D400E479B4 /* Resources */,
+				F2611F5682762DE85F2082E9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +155,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D7F1C163426682C6DA417DA6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-http-retry-ios-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F2611F5682762DE85F2082E9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-http-retry-ios/Pods-http-retry-ios-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/HTTPStatusCodes/HTTPStatusCodes.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HTTPStatusCodes.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-http-retry-ios/Pods-http-retry-ios-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		686336C420A459D400E479B4 /* Sources */ = {
@@ -278,6 +343,7 @@
 		};
 		686336DB20A459D400E479B4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BD16A750725B9B6A99B61999 /* Pods-http-retry-ios.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -295,6 +361,7 @@
 		};
 		686336DC20A459D400E479B4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 438061C64BCF88B45EA363CA /* Pods-http-retry-ios.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
