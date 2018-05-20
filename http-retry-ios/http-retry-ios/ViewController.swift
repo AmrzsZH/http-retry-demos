@@ -22,6 +22,8 @@ class ViewController: UIViewController {
 
 
     @IBAction func sendBtnClicked(_ sender: Any) {
+        // TODO: Modify url to get response with wanted http status code
+        // Now - 404
         let url = URL(string: "https://jsonplaceholder.typicode.com/11users")
         let request = URLRequest(url: url!)
         
