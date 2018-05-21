@@ -8,6 +8,9 @@
 
 import UIKit
 
+import HTTPStatusCodes
+
+
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -76,10 +79,13 @@ class ViewController: UIViewController {
             } else {
                 if let data = data, let response = response as? HTTPURLResponse {
                     print(response, data)
-                    if (response.statusCode == 200) {
-                        completion(.success(data))
-                    } else {
-                        completion(.failure(ApiRequestError.statusCodeOtherThan200(statusCode: response.statusCode)))
+                    
+                    if let statusCode = HTTPStatusCode(HTTPResponse: response) {
+                        if (statusCode.isSuccess) {
+                            completion(.success(data))
+                        } else {
+                            completion(.failure(ApiRequestError.statusCodeOtherThan200(statusCode: response.statusCode)))
+                        }
                     }
                 }
             }
